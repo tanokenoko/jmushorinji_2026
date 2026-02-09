@@ -57,6 +57,39 @@
     margin-bottom: 40px;
   }
 
+  /* ★★★ リンクボタンエリア 追加 ★★★ */
+  .place-links {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .btn-link {
+    display: inline-block;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+  }
+  .btn-link:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+  .btn-link img {
+    height: 48px;
+    width: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  @media (max-width: 600px) {
+    .place-links {
+      flex-direction: column;
+    }
+    .btn-link img {
+      width: 100%;
+      max-width: 240px;
+    }
+  }
+  /* ★★★ ここまで追加 ★★★ */
+
   /* ── 見どころカード ── */
   .spot-title {
     font-family: var(--font-heading);
@@ -152,6 +185,17 @@
       シンボルである湯畑を中心に、情緒ある街並みと、強酸性の泉質が特徴です。
     </p>
 
+    <!-- ★★★ リンクボタンエリア 追加 ★★★ -->
+    <div class="place-links fade-up">
+      <a id="map-link" target="_blank" class="btn-link" style="display:none;">
+        <img src="images/btn_map.jpg" alt="Google Mapsで見る">
+      </a>
+      <a id="official-link" target="_blank" class="btn-link" style="display:none;">
+        <img src="images/btn_official.jpg" alt="公式サイトを見る">
+      </a>
+    </div>
+    <!-- ★★★ ここまで追加 ★★★ -->
+
     <h3 class="spot-title fade-up">見どころ</h3>
 
     <div class="spot-list">
@@ -206,6 +250,28 @@
   <p>© 2026 Jichi Medical University – Shōrin-ji Kenpō Bu</p>
 </footer>
 
+<!-- ★★★ スクリプト追加 ★★★ -->
 <script src="script.js"></script>
+<script>
+  // リンクボタンの設定
+  (function() {
+    const mapLink = document.getElementById('map-link');
+    const officialLink = document.getElementById('official-link');
+    
+    // 草津温泉のリンク情報
+    const mapUrl = 'https://www.google.com/maps/place/草津温泉/@36.6202,138.5945,15z';
+    const officialUrl = 'https://www.kusatsu-onsen.ne.jp/';
+    
+    if (mapUrl && mapLink) {
+      mapLink.href = mapUrl;
+      mapLink.style.display = 'inline-block';
+    }
+    
+    if (officialUrl && officialLink) {
+      officialLink.href = officialUrl;
+      officialLink.style.display = 'inline-block';
+    }
+  })();
+</script>
 </body>
 </html>

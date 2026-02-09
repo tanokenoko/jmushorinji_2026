@@ -77,12 +77,6 @@
     margin-left: 8px;
     vertical-align: middle;
   }
-
-  /* バス用の青バッジ */
-  .car-header .car-number.bus {
-    background: #5b8da8;
-  }
-
   /* カード本文 */
   .car-body { padding: 18px 20px; }
 
@@ -142,14 +136,6 @@
     border-radius: 100px;
     margin-left: auto;
   }
-
-  /* バスカード: 同乗者テキスト */
-  .bus-note {
-    font-size: 14px;
-    color: var(--clr-text-sub);
-    line-height: 1.6;
-  }
-
   /* ── 遷移ボタン ── */
   .page-nav {
     display: flex;
@@ -207,13 +193,12 @@
     <!-- 1号車 -->
     <div class="car-card fade-up">
       <div class="car-header">
-        <span class="car-emoji">🚗</span>
-        <h3>〇〇先輩の車 <span class="car-number">1号車</span></h3>
+        <h3>〇〇の車 <span class="car-number">1号車</span></h3>
       </div>
       <div class="car-body">
         <div class="car-driver">
           <span class="label">Driver</span>
-          <span class="value">〇〇 先輩</span>
+          <span class="value">〇〇</span>
         </div>
         <p class="passengers-label">Passengers</p>
         <ul class="passenger-list">
@@ -239,13 +224,12 @@
     <!-- 2号車 -->
     <div class="car-card fade-up">
       <div class="car-header">
-        <span class="car-emoji">🚙</span>
-        <h3>△△先輩の車 <span class="car-number">2号車</span></h3>
+        <h3>△△の車 <span class="car-number">2号車</span></h3>
       </div>
       <div class="car-body">
         <div class="car-driver">
           <span class="label">Driver</span>
-          <span class="value">△△ 先輩</span>
+          <span class="value">△△ </span>
         </div>
         <p class="passengers-label">Passengers</p>
         <ul class="passenger-list">
@@ -268,23 +252,99 @@
       </div>
     </div>
 
-    <!-- バス -->
+    <!-- 3号車 -->
     <div class="car-card fade-up">
       <div class="car-header">
-        <span class="car-emoji">🚌</span>
-        <h3>バス（貸切） <span class="car-number bus">バス</span></h3>
+        <h3>××の車 <span class="car-number">3号車</span></h3>
       </div>
       <div class="car-body">
         <div class="car-driver">
           <span class="label">Driver</span>
-          <span class="value">業者（貸切バス）</span>
+          <span class="value">△△ </span>
         </div>
         <p class="passengers-label">Passengers</p>
-        <p class="bus-note">部員一同（上記車両以外の方々）<br>
-        詳細は別途連絡いたします。</p>
+        <ul class="passenger-list">
+          <li>
+            <span class="p-dot"></span>
+            <span class="p-name">D</span>
+            <span class="p-grade">2年</span>
+          </li>
+          <li>
+            <span class="p-dot"></span>
+            <span class="p-name">E</span>
+            <span class="p-grade">1年</span>
+          </li>
+          <li>
+            <span class="p-dot"></span>
+            <span class="p-name">F</span>
+            <span class="p-grade">1年</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 4号車 -->
+    <div class="car-card fade-up">
+      <div class="car-header">
+        <h3>nnの車 <span class="car-number">4号車</span></h3>
+      </div>
+      <div class="car-body">
+        <div class="car-driver">
+          <span class="label">Driver</span>
+          <span class="value">△△ </span>
+        </div>
+        <p class="passengers-label">Passengers</p>
+        <ul class="passenger-list">
+          <li>
+            <span class="p-dot"></span>
+            <span class="p-name">D</span>
+            <span class="p-grade">2年</span>
+          </li>
+          <li>
+            <span class="p-dot"></span>
+            <span class="p-name">E</span>
+            <span class="p-grade">1年</span>
+          </li>
+          <li>
+            <span class="p-dot"></span>
+            <span class="p-name">F</span>
+            <span class="p-grade">1年</span>
+          </li>
+        </ul>
       </div>
     </div>
 
+    <!-- 5号車 -->
+    <div class="car-card fade-up">
+      <div class="car-header">
+        <h3>ooの車 <span class="car-number">5号車</span></h3>
+      </div>
+      <div class="car-body">
+        <div class="car-driver">
+          <span class="label">Driver</span>
+          <span class="value">△△ </span>
+        </div>
+        <p class="passengers-label">Passengers</p>
+        <ul class="passenger-list">
+          <li>
+            <span class="p-dot"></span>
+            <span class="p-name">D</span>
+            <span class="p-grade">2年</span>
+          </li>
+          <li>
+            <span class="p-dot"></span>
+            <span class="p-name">E</span>
+            <span class="p-grade">1年</span>
+          </li>
+          <li>
+            <span class="p-dot"></span>
+            <span class="p-name">F</span>
+            <span class="p-grade">1年</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
     <!-- 遷移ボタン -->
     <div class="page-nav">
       <a href="lodge.html"     class="btn btn-outline fade-up">← 宿舎へ</a>
